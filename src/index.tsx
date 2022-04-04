@@ -49,9 +49,9 @@ interface Props {
   closeStyle?: any
   animationType?: 'none' | 'fade' | 'slide'
   areaTouchText: {
-    top?: number, 
-    bottom?: number, 
-    left?: number, 
+    top?: number,
+    bottom?: number,
+    left?: number,
     right?: number
   }
   shouldGetAccessToken?: boolean
@@ -311,11 +311,11 @@ export default class LinkedInModal extends React.Component<Props, State> {
     const { renderButton, linkText, areaTouchText, isDisabled = false } = this.props
     if (renderButton) {
       return(
-        <TouchableOpacity  
+        <TouchableOpacity
         accessibilityComponentType={'button'}
         accessibilityTraits={['button']}
         onPress={this.open}
-        hitSlop={areaTouchText} 
+        hitSlop={areaTouchText}
         disabled={isDisabled}>
           {renderButton()}
         </TouchableOpacity>
@@ -408,7 +408,7 @@ export default class LinkedInModal extends React.Component<Props, State> {
               javaScriptEnabled
               domStorageEnabled
               sharedCookiesEnabled
-              onLoadEnd={() => this.setState({ logout: false })}
+              onLoadEnd={() => this.setState({ logout: true })}
             />
           </View>
         )}
